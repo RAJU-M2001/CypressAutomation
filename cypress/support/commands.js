@@ -28,18 +28,23 @@ import 'cypress-mailosaur'
 
 
 
+// cypress/support/commands.js
+
 // Cypress.Commands.add('loginWithToken', (token) => {
-//     window.localStorage.setItem('q6QfYa0xupIBrwR2Tk9rvJSWCqs/49aBoSFUP5e8MXRjEJPX08ddhqWOcD/4pda6RwNiBcy3bFLFWY4RI8EkYXePoNvAp3pT0itz2e3to8tRXHd3ThXQHeTyDS3F2LC1', token);
+//     cy.visit('https://talent.woyage.ai/');
+//     cy.window().then((window) => {
+//       window.localStorage.setItem('yMLTikBl/v1JzjAA1f1CPq8etxTDhkpSVNBmqus6VLwA7h+5IwRFyMqshhoVaMyfY6APfJrGKcvPcc+t+dWhwZ92k+a14TY35Jn+PNyTPxXSbZSz0rZMlzZGB5VVi8QT', token);
+//     });
 //   });
-// Inside commands.js
-// Cypress.Commands.add('loginWithToken', (token) => {
-//   window.localStorage.setItem('woyage_user_session', token);
-// });
+  
 
-// Cypress.Commands.add('loginWithToken', (token) => {
-//   window.localStorage.setItem('auth_token', token);
-// });
-
-
+Cypress.Commands.add('loginWithToken', (token) => {
+    cy.visit('https://talent.woyage.ai/');  // Initial visit to the homepage
+    cy.window().then((window) => {
+      window.localStorage.setItem('yMLTikBl/v1JzjAA1f1CPq8etxTDhkpSVNBmqus6VLwA7h+5IwRFyMqshhoVaMyfY6APfJrGKcvPcc+t+dWhwZ92k+a14TY35Jn+PNyTPxXSbZSz0rZMlzZGB5VVi8QT', token);  // Replace with a more appropriate key like 'auth_token'
+    });
+    cy.reload();  // Reload the page to apply the token
+  });
+  
 
   
