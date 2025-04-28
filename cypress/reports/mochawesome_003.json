@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-04-27T05:23:36.471Z",
+    "end": "2025-04-27T05:23:50.668Z",
+    "duration": 14197
+  },
+  "results": [
+    {
+      "uuid": "0f56679e-2c99-41e5-abca-d51207292e38",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8f110126-6c9b-4f48-bb50-63488aa61bf6",
+          "title": "Manual Token Login",
+          "fullFile": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+          "file": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logs in by setting token manually",
+              "fullTitle": "Manual Token Login logs in by setting token manually",
+              "timedOut": null,
+              "duration": 10157,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const token = 'sozm9NndejKfSZkP4R2Ahr5bxt33D8jPUJ0QBrsrqxz9W2GyRRDlDrAVj3pEsJCjeT48VnpsBDjJIIjPaJU1tW/06hb45qpgU6kPmcFwS7IetCqGW0rNOVU+tPqYP178'; // You can keep it in a fixture also\ncy.visit('https://talent.woyage.ai/', {\n  onBeforeLoad(win) {\n    win.localStorage.setItem('your_token_key', token);\n  }\n});\ncy.visit('https://talent.woyage.ai/app#resume');",
+              "err": {},
+              "uuid": "0b22d74a-48b2-4a25-8173-663adcb25b08",
+              "parentUUID": "8f110126-6c9b-4f48-bb50-63488aa61bf6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b22d74a-48b2-4a25-8173-663adcb25b08"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10157,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "saveJson": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

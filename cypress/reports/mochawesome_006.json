@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-04-27T12:29:55.122Z",
+    "end": "2025-04-27T12:31:59.248Z",
+    "duration": 124126
+  },
+  "results": [
+    {
+      "uuid": "d7725440-b2a5-464c-a9da-6dd8fd5056e3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "62ba9183-e665-4f22-aab1-dad8f58a2860",
+          "title": "Manual Token Login",
+          "fullFile": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+          "file": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logs in by setting token manually and stays on the resume page",
+              "fullTitle": "Manual Token Login logs in by setting token manually and stays on the resume page",
+              "timedOut": null,
+              "duration": 90108,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const token = 'q6QfYa0xupIBrwR2Tk9rvJSWCqs/49aBoSFUP5e8MXRjEJPX08ddhqWOcD/4pda6RwNiBcy3bFLFWY4RI8EkYXePoNvAp3pT0itz2e3to8tRXHd3ThXQHeTyDS3F2LC1';\n// STEP 1: First visit the base domain without loading anything\ncy.visit('https://talent.woyage.ai/', {\n  failOnStatusCode: false\n});\n// STEP 2: Set the token into localStorage AFTER loading\ncy.window().then(win => {\n  win.localStorage.setItem('woyage_user_session', token);\n});\n// STEP 3: Now reload the page to simulate \"token already present\"\ncy.reload();\n// STEP 4: Now visit the Resume page\ncy.visit('https://talent.woyage.ai/app#resume');\n// STEP 5: Assert Resume page loaded\n// cy.contains('AI Powered Resume Builder', { timeout: 20000 }).should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at https://talent.woyage.ai/__cypress/runner/cypress_runner.js:136032:73\n    at tryCatcher (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1777:23)\n    at https://talent.woyage.ai/__cypress/runner/cypress_runner.js:4156:41\n    at tryCatcher (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2256:14)",
+                "diff": null
+              },
+              "uuid": "5f8f116c-4568-45d9-86aa-1be129409920",
+              "parentUUID": "62ba9183-e665-4f22-aab1-dad8f58a2860",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5f8f116c-4568-45d9-86aa-1be129409920"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 90108,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "saveJson": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

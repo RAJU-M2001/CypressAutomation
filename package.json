@@ -1,0 +1,29 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "read-email": "node readEmail.js"
+  },
+  "author": "Raju",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^14.2.1",
+    "dotenv": "^16.5.0",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.7.2",
+    "mailslurp-client": "^15.21.0"
+  },
+  "devDependencies": {
+    "cypress-mailosaur": "^2.17.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1",
+    
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

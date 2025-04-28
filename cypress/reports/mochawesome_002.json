@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-04-27T05:17:23.467Z",
+    "end": "2025-04-27T05:20:16.910Z",
+    "duration": 173443
+  },
+  "results": [
+    {
+      "uuid": "adcbe88c-c6cd-483a-891e-eddc097f0efa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "13758847-8ee4-4798-b8d9-cb3dc241e2d2",
+          "title": "Manual Token Login",
+          "fullFile": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+          "file": "cypress\\e2e\\1-getting-started\\loginTest.cy.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logs in by setting token manually",
+              "fullTitle": "Manual Token Login logs in by setting token manually",
+              "timedOut": null,
+              "duration": 90127,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const token = 'your_real_token_here'; // You can keep it in a fixture also\ncy.visit('https://talent.woyage.ai/', {\n  onBeforeLoad(win) {\n    win.localStorage.setItem('your_token_key', token);\n  }\n});\ncy.visit('https://talent.woyage.ai/app#resume');",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at https://talent.woyage.ai/__cypress/runner/cypress_runner.js:136032:73\n    at tryCatcher (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1777:23)\n    at https://talent.woyage.ai/__cypress/runner/cypress_runner.js:4156:41\n    at tryCatcher (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://talent.woyage.ai/__cypress/runner/cypress_runner.js:2256:14)",
+                "diff": null
+              },
+              "uuid": "8fe2907f-ee03-4ba8-b6b2-2a2a46c41ef6",
+              "parentUUID": "13758847-8ee4-4798-b8d9-cb3dc241e2d2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8fe2907f-ee03-4ba8-b6b2-2a2a46c41ef6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 90127,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "saveJson": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
