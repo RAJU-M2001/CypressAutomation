@@ -17,7 +17,9 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on);
       return config;
       
+      
     },
+    testIsolation: false,  // <- if you want to share states across tests
   },
   
 });

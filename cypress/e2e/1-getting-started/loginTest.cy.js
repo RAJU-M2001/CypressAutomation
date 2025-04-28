@@ -225,3 +225,45 @@
 //         .click({ force: true });
 //   });
 // });
+
+
+// describe('Login using API session token', () => {
+
+//     beforeEach(() => {
+//       cy.loginWithSession();
+//       cy.visit('https://talent.woyage.ai/app#resume');
+//     });
+  
+//     it('should access resume page', () => {
+//       cy.contains('AI Powered Resume Builder').should('be.visible');
+//     });
+  
+//   });
+  
+describe('Talent App Tests', () => {
+    beforeEach(() => {
+      cy.session('loginSession', () => {
+        cy.login(); // Use the custom login command
+      });
+    });
+  
+    it('Should visit the Resume page after login', () => {
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            if (err.message.includes('Minified React error #418')) {
+              console.log('Caught React Error #418:', err);
+              return false; // Prevent the test from failing due to this error
+            }
+            return true; // Allow other errors to fail the test as usual
+     
+    });
+})
+    it('test',()=>{
+        cy.visit('https://talent.woyage.ai/app#resume'); // Should already be logged in and directly visit the resume page
+        cy.get(".faq-icon.icon").click();
+
+   
+   
+        
+
+    });
+});
