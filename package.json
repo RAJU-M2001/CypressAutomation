@@ -19,10 +19,10 @@
     "mailslurp-client": "^15.21.0"
   },
   "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
     "cypress-mailosaur": "^2.17.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-xpath": "^2.0.1",
-    
     "mochawesome-merge": "^5.0.0",
     "mochawesome-report-generator": "^6.2.0"
   }

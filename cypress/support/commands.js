@@ -37,5 +37,9 @@ Cypress.Commands.add('login', () => {
     cy.get('#password').type('Zxcvbnm!1');
     cy.get("button[type='submit']").click();
     // Optionally, assert the correct URL after login
-    cy.url().should('eq', 'https://talent.woyage.ai/app#resume');
+
+
+
+
+    cy.url().should("eq", "https://talent.woyage.ai/app#resume");
 });
