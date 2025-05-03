@@ -15,14 +15,14 @@
     "cypress": "^14.2.1",
     "dotenv": "^16.5.0",
     "imap-simple": "^5.1.0",
-    "mailparser": "^3.7.2",
-    "mailslurp-client": "^15.21.0"
+    "mailparser": "^3.7.2"
   },
   "devDependencies": {
     "cypress-file-upload": "^5.0.8",
     "cypress-mailosaur": "^2.17.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-xpath": "^2.0.1",
+    "mailslurp-client": "^15.21.0",
     "mochawesome-merge": "^5.0.0",
     "mochawesome-report-generator": "^6.2.0"
   }
