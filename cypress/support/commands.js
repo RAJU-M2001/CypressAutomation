@@ -23,23 +23,60 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import 'cypress-mailosaur'
+//import 'cypress-mailosaur'
+//import { CheckEmailBodyFeatureSupportResultsToJSON } from 'mailslurp-client';
+
+
+//Talent command.js
+
+// Cypress.Commands.add('login',()=>{
+//     cy.visit('https://talent.woyage.ai/')
+
+//     cy.get('#email').type('offshoreqa@woyage.ai');
+//     cy.get('#password').type('Woyage!2');
+//     cy.get("button[type='submit']").click({force:true});
+
+//     cy.url().should('include', 'app#resume');
+// });
+
+
+// Cypress.Commands.add('login', () => {
+//     cy.visit('https://stage.woyage.ai/', {
+//       auth: {
+//         username: 'betatest',
+//         password: 'woyagetest'
+//       }
+//     });
+//     cy.get('#email').type('raju.muthukumar@woyage.ai');
+//     cy.wait(1000);
+//     cy.get('#password').type('Woyage!1');
+//     cy.wait(1000);
+//     cy.get("button[type='submit']").click({ force: true });
+
+//     cy.url().should('include', '/app#interview');
+// });
+
+
+// Cypress.Commands.add('login', () => {
+//     cy.visit('https://stage.woyage.ai/', {
+//       auth: {
+//         username: 'betatest',
+//         password: 'woyagetest'
+//       }
+//     });
+
+//     cy.get('#email').should('be.visible').type('raju.muthukumar@woyage.ai');
+//     cy.wait(1000);
+//     cy.get('#password').should('be.visible').type('Woyage!1');
+//     cy.wait(1000);
+//     cy.get("button[type='submit']").click({ force: true });
+
+//     // Confirm successful login
+//     //cy.url().should('include', '/app#interview');
+//     cy.url().should('eq','https://stage.woyage.ai/app#interview')
+//   });
 
 
 
 
-// cypress/support/commands.js
-
-
-Cypress.Commands.add('login', () => {
-    cy.visit('https://talent.woyage.ai/'); // <-- Change this URL to your login page
-    cy.get('#email').type('rajutamilarasan1@gmail.com');
-    cy.get('#password').type('Zxcvbnm!1');
-    cy.get("button[type='submit']").click();
-    // Optionally, assert the correct URL after login
-
-
-
-
-    cy.url().should("eq", "https://talent.woyage.ai/app#resume");
-});
+  

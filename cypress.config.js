@@ -26,9 +26,7 @@
 
 
 const { defineConfig } = require('cypress');
-const { MailSlurp } = require('mailslurp-client');
 
-const mailslurp = new MailSlurp({ apiKey: '202c75b642808fb0012610a73f0634a8b6360a348fabb01ffa58032c2f1ee01c' }); // ← paste your real API key here or load from env
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
@@ -41,10 +39,9 @@ module.exports = defineConfig({
     saveJson: true
   },
   e2e: {
+    
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
-
-      // ✅ Register MailSlurp tasks
       on('task', {
         async createInbox() {
           return await mailslurp.createInbox();
@@ -53,7 +50,6 @@ module.exports = defineConfig({
           return await mailslurp.waitForLatestEmail(inboxId, 30000);
         }
       });
-
       return config;
     },
     testIsolation: false,
